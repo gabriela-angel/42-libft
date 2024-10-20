@@ -6,7 +6,7 @@
 /*   By: gangel-a <gangel-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 18:21:44 by gangel-a          #+#    #+#             */
-/*   Updated: 2024/10/14 12:47:56 by gangel-a         ###   ########.fr       */
+/*   Updated: 2024/10/17 18:24:46 by gangel-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	i = 0;
 	if (nmemb == 0 || size == 0)
 		return (malloc(0));
-	if ((nmemb * size) > LONG_MAX)
+	if ((nmemb * size) > (size_t)-1)
 		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (!ptr)

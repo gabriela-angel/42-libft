@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gangel-a <gangel-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/08 20:27:40 by gangel-a          #+#    #+#             */
-/*   Updated: 2024/10/20 14:40:13 by gangel-a         ###   ########.fr       */
+/*   Created: 2024/10/17 14:52:29 by gangel-a          #+#    #+#             */
+/*   Updated: 2024/10/17 16:44:49 by gangel-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	char	*ptr;
+	t_list	*ptr;
+	t_list	*next_node;
 
-	ptr = (char *)s;
-	while (*ptr)
+	if (!lst || !del)
+		return ;
+	ptr = *lst;
+	while (ptr)
 	{
-		if (*ptr == (unsigned char)c)
-		{
-			return (ptr);
-		}
-		ptr++;
+		next_node = ptr->next;
+		ft_lstdelone(ptr, del);
+		ptr = next_node;
 	}
-	if ((unsigned char)c == '\0')
-		return (ptr);
-	return (NULL);
+	*lst = NULL;
 }
