@@ -6,7 +6,7 @@
 /*   By: gangel-a <gangel-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 20:27:40 by gangel-a          #+#    #+#             */
-/*   Updated: 2024/10/20 14:40:13 by gangel-a         ###   ########.fr       */
+/*   Updated: 2024/10/21 14:10:41 by gangel-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ char	*ft_strchr(const char *s, int c)
 	while (*ptr)
 	{
 		if (*ptr == (unsigned char)c)
-		{
 			return (ptr);
-		}
 		ptr++;
 	}
 	if ((unsigned char)c == '\0')

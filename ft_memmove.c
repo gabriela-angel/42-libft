@@ -6,7 +6,7 @@
 /*   By: gangel-a <gangel-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:32:03 by gangel-a          #+#    #+#             */
-/*   Updated: 2024/10/14 14:34:23 by gangel-a         ###   ########.fr       */
+/*   Updated: 2024/10/21 14:06:01 by gangel-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t			i;
-	unsigned char	*d;
-	unsigned char	*s;
+	size_t				i;
+	unsigned char		*d;
+	const unsigned char	*s;
 
 	i = 0;
 	d = (unsigned char *)dest;
-	s = (unsigned char *)src;
+	s = (const unsigned char *)src;
 	if (s < d)
 	{
 		i = n;

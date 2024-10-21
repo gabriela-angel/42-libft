@@ -6,7 +6,7 @@
 /*   By: gangel-a <gangel-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 18:50:06 by gangel-a          #+#    #+#             */
-/*   Updated: 2024/10/15 16:36:19 by gangel-a         ###   ########.fr       */
+/*   Updated: 2024/10/21 14:27:02 by gangel-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 		dst[len_d + i] = src[i];
 		i++;
 	}
-	if (len_d < size)
+	if (len_d + i < size)
 		dst[len_d + i] = '\0';
 	return (len_d + len_s);
 }

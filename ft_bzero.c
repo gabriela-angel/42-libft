@@ -6,7 +6,7 @@
 /*   By: gangel-a <gangel-a@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 16:08:55 by gangel-a          #+#    #+#             */
-/*   Updated: 2024/10/07 16:16:20 by gangel-a         ###   ########.fr       */
+/*   Updated: 2024/10/21 12:15:11 by gangel-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_bzero(void *s, size_t n)
 	size_t			i;
 
 	i = 0;
-	p = s;
+	p = (unsigned char *)s;
 	while (i < n)
 	{
 		p[i] = 0;
