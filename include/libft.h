@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gangel-a <gangel-a@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gangel-a <gangel-a@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 12:05:54 by gangel-a          #+#    #+#             */
-/*   Updated: 2024/10/20 15:58:30 by gangel-a         ###   ########.fr       */
+/*   Updated: 2024/12/17 16:44:32 by gangel-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
+# include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -36,6 +37,13 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 void	*ft_memset(void *s, int c, size_t n);
+int		ft_printf(const char *format, ...);
+int		ft_printchar(int c);
+int		ft_printhex(unsigned long n, char c);
+int		ft_printnbr(int n);
+int		ft_printunbr(unsigned int n);
+int		ft_printptr(unsigned long ptr);
+int		ft_printstr(char *s);
 void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
